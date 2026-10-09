@@ -81,7 +81,8 @@ until the machine is reset.
 
 ## Credits
 
-Monaco GP (c) SEGA 1979.
+Monaco GP (c) SEGA 1979
+Pro Monaco GP (c) SEGA 1980
 
 This port is built on **Monaco GP Remake (MGPr) v1.5.3 by Ben Geeves**. Its graphics,
 tracks, rules, timings and sounds are what the C64 version is made from and checked
@@ -92,7 +93,7 @@ https://forum.arcadecontrols.com/index.php?topic=134445.0
 
 The original Monaco GP game is interesting in arcade history in that it uses no CPU.
 Therefore there is no original code from the original game that could be used to recreate 
-this simulation.
+this simulation. Only the game logic which exists in Ben Geeves' remake.
 
 This is a fan-made simulation, and not a SEGA product, and not for commercial use. 
 Making money from 'Monaco GP64' in any way is strictly prohibited.
