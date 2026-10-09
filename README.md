@@ -1,6 +1,8 @@
 # Monaco GP 64
 
-A Commodore 64 port of Sega's 1979 arcade game **Monaco GP** (the original, not Pro Monaco GP),
+Lemans? Pah! How about the O.G.?
+
+A Commodore 64 port of Sega's 1979 arcade game **Monaco GP** and **Pro Monaco GP**
 shown inside the arcade bezel. The whole 240 x 384 arcade playfield is on screen in true
 proportions, scrolling at full frame rate on PAL and NTSC machines.
 
@@ -9,9 +11,16 @@ proportions, scrolling at full frame rate on PAL and NTSC machines.
 - `MonacoGP64.d64`: `LOAD"MONACO GP",8,1` then `RUN` (or autostart it in VICE).
 - `MonacoGP64.prg` is the same program as a single file: load it and `RUN`.
 
+Select which version of the game you wish to play. Joystick port 2.
+Pro Monaco GP supports scores beyond 10K (for the pros of course), and includes the 
+car-passing bonus.
+
 ## Controls
 
-On the attract screen: **F1** or fire starts a game, **F3** picks the controller and
+Joystick in Port 2 works all the time, however it would be criminal not to include
+analog controls for this game. So paddles and mouse are supported.
+
+On the attract screen: **F1** or fire starts a game, **F3** picks the additional controller and
 **F5** picks automatic or manual gears (both shown under PRESS FIRE). In a game,
 **RUN/STOP** pauses.
 
@@ -21,8 +30,17 @@ On the attract screen: **F1** or fire starts a game, **F3** picks the controller
 | 1351 mouse | 1 | move left / right, like the arcade's wheel | left button | right button toggles |
 | paddles | 1 | paddle A knob | paddle A button | paddle B button toggles |
 
-Picking the paddles also picks automatic gears; the others start with manual gears.
-With the paddles, a car put at the start position on the right (when a game starts, and
+Picking the paddles also picks automatic gears by default - Lemans style. 
+The others options start with manual gears.
+
+When using paddles, should you crash, you must turn the paddle all the way to the right first to 
+drive left off the verge.
+
+The C64 does not support a driving paddle to the best of my knowledge (like Atari does)
+that can spin without reaching the end of the potentiometer. The arcade game also had a 
+steering wheel that free-spin.
+
+For that reason, a car put at the start position on the right (when a game starts, and
 after a crash) waits there, in its grace, until the knob has been turned far enough to the
 right for the rest of its travel to cover the road: about two thirds of the way round on
 most roads, a little more on the widest. From then on the car moves with the knob from
@@ -30,8 +48,13 @@ where it stands, so it is never swung to wherever the knob was left, and the kno
 runs out of travel before the car is across the road. Turn the knob right while the car
 spins or burns and no time is lost. On ice the car slides away from the knob's position,
 as it does from the stick's.
+
 Automatic gears change up where low gear stops pulling and back down when the car slows.
 The gear you are in shows as **HI** or **LO** beside the clock.
+
+You can still use manual gears because the joystick in port 2 is never disabled. You can use the manual
+gear toggle button per your input device or you can pull on the joystick to manually switch gears.
+That gives you the most accurate controls possible to play the game with.
 
 ## The game
 
@@ -41,6 +64,7 @@ EXTENDED PLAY when the clock reaches 0: no clock, spare cars instead (they blink
 column under the gear display), tow trucks, the narrow bridge and the harbour loop. In
 normal play a crash spins you and costs time; in extended play it costs a car. Today's
 best 5 and your ranking are kept while the machine is on.
+The game keeps going until you run out of lives.
 
 ## Play-testing
 
@@ -57,12 +81,20 @@ until the machine is reset.
 
 ## Credits
 
-Monaco GP (c) Sega 1979.
+Monaco GP (c) SEGA 1979.
 
 This port is built on **Monaco GP Remake (MGPr) v1.5.3 by Ben Geeves**. Its graphics,
 tracks, rules, timings and sounds are what the C64 version is made from and checked
 against; without it, this game would not have happened.
-
 The MONACO GP logo in the panel is converted from **Zorg's** artwork of the arcade bezel.
-This is a fan-made port, not a Sega product, and not for commercial use. The Exomizer
-self-extractor in the crunched file is for non-commercial use only.
+
+https://forum.arcadecontrols.com/index.php?topic=134445.0
+
+The original Monaco GP game is interesting in arcade history in that it uses no CPU.
+Therefore there is no original code from the original game that could be used to recreate 
+this simulation.
+
+This is a fan-made simulation, and not a SEGA product, and not for commercial use. 
+Making money from 'Monaco GP64' in any way is strictly prohibited.
+
+The Exomizer self-extractor in the crunched file is for non-commercial use only.
